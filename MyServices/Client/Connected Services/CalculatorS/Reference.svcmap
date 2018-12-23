@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9cc22d6b-4f60-457c-be20-a73bae82084d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/ServiceModelSamples/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ac17bbe4-0431-4294-909c-d0c153393a4f" SourceId="1" SourceUrl="http://localhost:8080/ServiceModelSamples/service?xsd=xsd0" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8d3fd261-17c1-4b60-bdbb-6a72beb61b78" SourceId="1" SourceUrl="http://localhost:8080/ServiceModelSamples/service?xsd=xsd1" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="ba52039f-fde7-45b8-8595-1256a940ea32" SourceId="1" SourceUrl="http://localhost:8080/ServiceModelSamples/service?disco" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e0ec363c-1d5e-4fe7-80ab-982eefe8630f" SourceId="1" SourceUrl="http://localhost:8080/ServiceModelSamples/service?wsdl=wsdl0" />
+    <MetadataFile FileName="CalculatorService.wsdl" MetadataType="Wsdl" ID="60e42d3e-6ad3-4b61-a92f-fb2382e66766" SourceId="1" SourceUrl="http://localhost:8080/ServiceModelSamples/service?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
