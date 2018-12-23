@@ -15,6 +15,18 @@ namespace Client
             return new ChannelFactory<ICalculator>(wsHttpBinding, "http://localhost:8080/ServiceModelSamples/service");
         }
 
+        private static ChannelFactory<ICalculator> CreateChannelFactoryUsingNetTcpBinding()
+        {
+            NetTcpBinding netTcpBinding = new NetTcpBinding();
+            return new ChannelFactory<ICalculator>(netTcpBinding, "net.tcp://localhost:9000/MyService");
+        }
+
+        private static ChannelFactory<ICalculator> CreateChannelFactoryUsingNetHttpBinding()
+        {
+            NetHttpBinding netHttpBinding = new NetHttpBinding();
+            return new ChannelFactory<ICalculator>(netHttpBinding, "http://localhost:8081/ServiceModelSamples/serviceNetHttp");
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Connected to service by reference to the service added to project");
@@ -26,6 +38,20 @@ namespace Client
                 "The ServiceModel Metadata Utility tool is used to generate service model code from metadata documents," + Environment.NewLine +
                 "and metadata documents from service model code.");
             using (ChannelFactory<ICalculator> cf = CreateChannelFactoryUsingWSHttpBinding())
+            {
+                ICalculator o = cf.CreateChannel();
+                Console.WriteLine(o.Add(4, 5));
+            }
+            /////////////////////////////////////////////////////////
+            Console.WriteLine("Connected to service by Channel Factory with NetTcpBinding");
+            using (ChannelFactory<ICalculator> cf = CreateChannelFactoryUsingNetTcpBinding())
+            {
+                ICalculator o = cf.CreateChannel();
+                Console.WriteLine(o.Add(4, 5));
+            }
+            /////////////////////////////////////////////////////////
+            Console.WriteLine("Connected to service by Channel Factory with NetHttpBinding");
+            using (ChannelFactory<ICalculator> cf = CreateChannelFactoryUsingNetHttpBinding())
             {
                 ICalculator o = cf.CreateChannel();
                 Console.WriteLine(o.Add(4, 5));
